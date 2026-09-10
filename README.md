@@ -29,6 +29,28 @@ installation with:
 bob --version
 ```
 
+## Use Bob in Visual Studio Code
+
+Bob Shell runs in a terminal; it does not need a separate VS Code extension.
+Open the folder you want Bob to work with and start Bob from VS Code's
+integrated terminal:
+
+```bash
+code /path/to/project
+```
+
+In VS Code, open **Terminal → New Terminal** (or press <kbd>Ctrl</kbd> +
+<kbd>`</kbd>), then run:
+
+```bash
+source ~/.bashrc
+bob
+```
+
+If VS Code was already open when the installation completed, restart its
+integrated terminal so it receives the updated `PATH`. From there, Bob runs in
+the opened project's directory. Use `bob --help` to see its available commands.
+
 This avoids `sudo npm install -g`, which can leave root-owned files in a
 user-managed npm setup. The `DEP0169` line in the output is a Node.js
 deprecation warning; it is not the cause of the failed installation.
